@@ -33,7 +33,7 @@ const submitForm = async () => {
         <div class="header-item">
           <ul>
             <li><a href="#">首页</a></li>
-            <li><a href="#">宠物中心</a></li>
+            <li><a href="html/petcenter/petcenter.html">宠物中心</a></li>
             <li><a href="#">购宠流程</a></li>
             <li><a href="#">服务网点</a></li>
             <li><a href="#">行业动态</a></li>
