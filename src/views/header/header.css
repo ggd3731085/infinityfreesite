@@ -1,0 +1,116 @@
+w{
+    max-width: 1280;
+    margin: 0 auto;/*居中*/
+}
+/* ヘーダが固定 */
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;/*一番上に置く*/
+    height: 77px;
+}
+/* 背景色等 */
+.header .bg {
+    /* 絶対位置 ヘーダを全てカバーする*/
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: aliceblue;
+    box-shadow: 1px 1px 2px 1px red;/*箱*/
+    z-index: 1;/*一番したレベル1*/
+    opacity: 10;
+}
+/* 背景色等 */
+.header .w {
+    position: relative;
+    z-index: 2;
+    display: flex;/*横並べ*/
+    align-items: center;/*縦列居中*/
+}
+.w .logo {
+    width: 88px;
+    height: 70px;
+}
+.logo img {
+    /*object-fit: contain; や cover; を指定すると、画像の比率を維持しつつ、親要素にフィットさせることができる*/
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* 画像全体を表示 */
+}
+.header-item{
+    flex:1;
+}
+.header-item ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    /* height: 50px; */
+}
+.header-item ul li {
+    padding: 0 11px;
+    position: relative;
+}
+.header-item ul li a:hover {
+    font-weight: 700;
+}
+.header-item ul li a:hover::before {
+    content: '';
+    position: absolute;
+    left:50%;
+    bottom: -5px;
+    width: 50%;
+    height: 2px;
+    background-color: red;
+    transform: translate(-50%,50%);
+}
+/* 検索  */
+.header-search input {
+    border:0;
+}
+.header-search {
+    width: 220px;
+    height: 36px;
+    background-color: #fff;
+    border:2px solid red;
+    border-radius: 8px;
+    margin-right:20px;/*他の項目の距離*/
+    padding: 0 10px;/*内容をcenterにする*/
+    /* line-height: 36px; */
+    display: flex;/*内容をcenterにする*/
+    align-items: center;/*内容をcenterにする*/
+    transition:.5s;
+}
+/* 伪类选择器  */
+.header-search:focus-within {
+    width: 300px;
+}
+.login-sign{
+    flex:-1;
+}
+.login-sign ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    /* height: 50px; */
+}
+.login-sign ul li {
+    padding: 0 11px;
+    position: relative;
+}
+.login-sign ul li a:hover {
+    font-weight: 700;
+}
+.login-sign ul li a:hover::before {
+    content: '';
+    position: absolute;
+    left:50%;
+    bottom: -5px;
+    width: 50%;
+    height: 2px;
+    background-color: red;
+    transform: translate(-50%,50%);
+}
